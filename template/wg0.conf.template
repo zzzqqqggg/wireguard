@@ -1,0 +1,11 @@
+[Interface]
+Address = <server.ip.address/24>
+ListenPort = 51820
+PrivateKey = <server.private.key>
+
+PostUp = sysctl -w net.ipv4.ip_forward=1; iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = sysctl -w net.ipv4.ip_forward=0; iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+
+# [Peer]
+# PublicKey = <client.public.key>
+# AllowedIPs = <client.ip.address/32>

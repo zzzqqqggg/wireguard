@@ -59,9 +59,8 @@ echo <GITHUB_TOKEN> | docker login ghcr.io -u <GITHUB_USERNAME> --password-stdin
 #### Отправка в реестр ghcr.io
 
 ```shell
-docker tag wireguard ghcr.io/<GITHUB_USERNAME>/wireguard:<VERSION_TAG>
-docker push ghcr.io/<GITHUB_USERNAME>/wireguard:<VERSION_TAG>
+docker tag wireguard ghcr.io/<GITHUB_USERNAME>/wireguard:latest
+docker push ghcr.io/<GITHUB_USERNAME>/wireguard:latest
 ```
 
 - <GITHUB_USERNAME> - имя пользователя GitHub
-- <VERSION_TAG> - версия образа

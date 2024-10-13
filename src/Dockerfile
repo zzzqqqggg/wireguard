@@ -1,7 +1,7 @@
 FROM debian:bullseye-slim
 
 RUN apt-get update && \
-    apt-get install -y iptables wireguard iproute2 curl && \
+    apt-get install -y procps iptables wireguard iproute2 curl && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

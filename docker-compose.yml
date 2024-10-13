@@ -1,6 +1,6 @@
 services:
   wireguard:
-    image: ghcr.io/zzzqqqggg/wireguard:0.0.1
+    image: ghcr.io/zzzqqqggg/wireguard:latest
     container_name: wireguard
     cap_add:
       - NET_ADMIN
